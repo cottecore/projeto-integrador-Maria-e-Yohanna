@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'apresentacao',
     loadChildren: () => import('./apresentacao/apresentacao.module').then( m => m.ApresentacaoPageModule)
   },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'autenticacao',
+    loadChildren: () => import('./autenticacao/autenticacao.module').then( m => m.AutenticacaoPageModule)
+  },
 ];
 
 @NgModule({
