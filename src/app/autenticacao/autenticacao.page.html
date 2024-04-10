@@ -10,11 +10,11 @@
   </ion-header>
   <img src="../../assets/VoltA.png">
 
-  <ion-input class="cadEmail"  color="favorite" label="Email" label-placement="floating" fill="outline" placeholder="Digite o email fornecido pela empresa"></ion-input>
+  <ion-input required class="cadEmail"  color="favorite" label="Email" label-placement="floating" fill="outline" placeholder="Digite o email fornecido pela empresa"helperText="Insira uma senha válida" errorText="Senha inválida" ngModel email></ion-input>
   <br>
 
-  <ion-input class="cadSenha" type="password" color="favorite" label="Senha" label-placement="floating" fill="outline" placeholder="Digite a senha fornecida pela empresa"></ion-input>    
-  <a href="" class="Esenha">Esqueci minha senha</a>
+  <ion-input required class="cadSenha" type="password" color="favorite" label="Senha" label-placement="floating" fill="outline" placeholder="Digite a senha fornecida pela empresa" helperText="Insira uma senha válida" errorText="Senha inválida" ngModel></ion-input>    
+  <a href="" class="Esenha" routerLink="/recuperacao">Esqueci minha senha</a>
 <br>
 <br>
   <ion-button shape="round" fill="outline" color="favorite" class="botaoAcessar" routerLink="/home" style="width: 30%; margin-left: 35%;">Entrar</ion-button>
