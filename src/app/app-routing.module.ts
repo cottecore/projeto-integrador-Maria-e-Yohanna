@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'recuperacao',
     loadChildren: () => import('./recuperacao/recuperacao.module').then( m => m.RecuperacaoPageModule)
   },
+  {
+    path: 'lista-email',
+    loadChildren: () => import('./lista-email/lista-email.module').then( m => m.ListaEmailPageModule)
+  },
 ];
 
 @NgModule({
