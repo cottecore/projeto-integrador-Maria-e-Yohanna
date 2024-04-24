@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'lista-email',
     loadChildren: () => import('./lista-email/lista-email.module').then( m => m.ListaEmailPageModule)
   },
+  {
+    path: 'cadastro-lampada',
+    loadChildren: () => import('./cadastro-lampada/cadastro-lampada.module').then( m => m.CadastroLampadaPageModule)
+  },
 ];
 
 @NgModule({
