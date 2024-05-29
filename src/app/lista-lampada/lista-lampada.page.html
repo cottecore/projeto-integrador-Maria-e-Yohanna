@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ListaLampadas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-button shape="round" class="BAddEmail" color="favorite" routerLink="/cadastro-lampada" > <ion-icon name="add"></ion-icon> </ion-button>
+  <img src="../../assets/VoltA.png">
+
+
+  <ion-button id="open-modal" color="favorite" expand="block">Lista de lâmpadas</ion-button>
+
+  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+    <ng-template>
+      <ion-content>
+        <ion-searchbar placeholder="Pesquisar" (click)="modal.setCurrentBreakpoint(0.75)"></ion-searchbar>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="bulb-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Lâmpadas de LED</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger" class="IconT"></ion-icon>
+            <ion-icon name="create"  class="IconR"></ion-icon>            
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-icon name="bulb-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Lâmpadas fluorescentes</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger"></ion-icon>
+              <ion-icon name="create"></ion-icon>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-icon name="bulb-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Lâmpadas incandescentes</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger"></ion-icon>
+              <ion-icon name="create"></ion-icon>
+          </ion-item>
+          <br>
+
+          <ion-item>
+            <ion-icon name="bulb-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Lâmpadas de halogênio</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger"></ion-icon>
+              <ion-icon name="create" ></ion-icon>
+          </ion-item>
+
+          <br>
+
+          <ion-item>
+            <ion-icon name="bulb-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Lâmpada de filamento</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger"></ion-icon>
+              <ion-icon name="create"></ion-icon>
+          </ion-item>
+
+          <br>
+
+          <ion-item>
+            <ion-icon name="bulb-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Lâmpadas inteligentes</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger"></ion-icon>
+              <ion-icon name="create"></ion-icon>
+          </ion-item>
+
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

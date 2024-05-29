@@ -47,6 +47,14 @@ const routes: Routes = [
     path: 'cadastro-lampada',
     loadChildren: () => import('./cadastro-lampada/cadastro-lampada.module').then( m => m.CadastroLampadaPageModule)
   },
+  {
+    path: 'lista-lampada',
+    loadChildren: () => import('./lista-lampada/lista-lampada.module').then( m => m.ListaLampadaPageModule)
+  },
+  {
+    path: 'listar-lampada',
+    loadChildren: () => import('./listar-lampada/listar-lampada.module').then( m => m.ListarLampadaPageModule)
+  },
 ];
 
 @NgModule({
