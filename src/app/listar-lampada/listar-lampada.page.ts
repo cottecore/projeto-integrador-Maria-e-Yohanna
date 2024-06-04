@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequisicaoService } from '../service/requisicao.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-lampada',
@@ -9,7 +10,8 @@ import { RequisicaoService } from '../service/requisicao.service';
 export class ListarLampadaPage implements OnInit {
 
   constructor(
-    public requisicao_service:RequisicaoService
+    public requisicao_service:RequisicaoService,
+    public router:Router
 
   ) { }
 
@@ -29,6 +31,21 @@ export class ListarLampadaPage implements OnInit {
       }
     );
   }
+
+editar(id:number){
+  this.router.navigateByUrl('/usuario-form/' + id);
+}
+
+excluir(id:number){
+  this.requisicao_service.get({
+    controller:'lampada-excluir',
+    id:id
+  })
+  .subscribe(() => {
+    this.listar();
+  });
+}
+
 
 
 }
