@@ -33,7 +33,7 @@ export class ListarLampadaPage implements OnInit {
   }
 
 editar(id:number){
-  this.router.navigateByUrl('/usuario-form/' + id);
+  this.router.navigateByUrl('/cadastro-lampada/' + id);
 }
 
 excluir(id:number){
@@ -43,7 +43,7 @@ excluir(id:number){
   })
   .subscribe(() => {
     this.listar();
-  });
+  })
 }
 
 

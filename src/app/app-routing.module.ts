@@ -48,6 +48,10 @@ const routes: Routes = [
     loadChildren: () => import('./cadastro-lampada/cadastro-lampada.module').then( m => m.CadastroLampadaPageModule)
   },
   {
+    path: 'cadastro-lampada/:id',
+    loadChildren: () => import('./cadastro-lampada/cadastro-lampada.module').then( m => m.CadastroLampadaPageModule)
+  },  
+  {
     path: 'lista-lampada',
     loadChildren: () => import('./lista-lampada/lista-lampada.module').then( m => m.ListaLampadaPageModule)
   },

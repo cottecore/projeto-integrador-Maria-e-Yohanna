@@ -14,6 +14,7 @@ export class CadastroLampadaPage implements OnInit {
     public rs:RequisicaoService,
     private activated_router:ActivatedRoute
   ) {
+    if (this.id != 0){
     this.activated_router.params
     .subscribe(
       (params:any)=> {
@@ -29,6 +30,7 @@ export class CadastroLampadaPage implements OnInit {
         );
       }
     );
+    }
    }
 
   ngOnInit() {
@@ -40,10 +42,16 @@ salvar(){
   fd.append('controller', 'lampada');
   fd.append('id',String(this.id));
   fd.append('op', 'salvar');
+  fd.append('id',String(this.id));
   fd.append('descricao',this.descricao);
 
+
   this.rs.post(fd)
-  .subscribe();
+  .subscribe(
+    () => {
+      location.href = '/listar-lampada';
+    }
+  );
 }
 
 }
