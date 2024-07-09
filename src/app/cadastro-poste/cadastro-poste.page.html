@@ -1,21 +1,34 @@
 <ion-content [fullscreen]="true">
   <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaCadPoste"></ion-icon>
 
-  <ion-img src="../../assets/VoltA.png"></ion-img>
+  <ion-img style="width: 70%; margin-left: 15%;" src="../../assets/VoltA.png"></ion-img>
 
     <ion-label color="favorite" class="LampSty">
       <h1 style="margin-bottom: 6%;">Cadastre as informações<br> do poste:</h1>
     </ion-label>
 
+
     <div class="poste">
       <ion-input [(ngModel)]="descricao" required class="cadNome" color="favorite" label="Endereço" label-placement="floating" fill="outline" placeholder="Ex: Estado, Cidade, Bairro, Rua"></ion-input>
-    <br>
-    <ion-button (click)="salvar()" shape="round" fill="outline" color="favorite" class="botaoAcessar" style="width: 30%; margin-left: 35%;">Cadastrar</ion-button>
-
-   </div>
-
+    
+    
+  
 
  
+      <ion-select aria-label="Fruit" class="cadNome" style="margin-top: 5%;" interface="popover" color="favorite" label="Tipo do poste:" label-placement="floating" fill="outline" placeholder="Selecione um tipo de poste">
+        <ion-select-option value="apples">Poste de metal</ion-select-option>
+        <ion-select-option value="oranges">Poste de madeira</ion-select-option>
+        <ion-select-option value="bananas">Poste de concreto</ion-select-option>
+      </ion-select>
+
+      <br>
+      <ion-input [(ngModel)]="descricao" required class="cadNome" color="favorite" label="Unidade consumidora" label-placement="floating" fill="outline" placeholder="insira o código"></ion-input>
+    
+    
+      <ion-button (click)="salvar()" shape="round" fill="outline" color="favorite" class="botaoAcessar" style="width: 30%; margin-left: 35%; margin-top: 10%;">Cadastrar</ion-button>
+     
+
+    </div>
 
 
 
