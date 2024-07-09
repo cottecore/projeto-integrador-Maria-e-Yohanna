@@ -51,6 +51,7 @@ const routes: Routes = [
     path: 'cadastro-lampada/:id',
     loadChildren: () => import('./cadastro-lampada/cadastro-lampada.module').then( m => m.CadastroLampadaPageModule)
   },  
+
   {
     path: 'lista-lampada',
     loadChildren: () => import('./lista-lampada/lista-lampada.module').then( m => m.ListaLampadaPageModule)
@@ -58,6 +59,17 @@ const routes: Routes = [
   {
     path: 'listar-lampada',
     loadChildren: () => import('./listar-lampada/listar-lampada.module').then( m => m.ListarLampadaPageModule)
+  },
+  {
+    path: 'demanda',
+    loadChildren: () => import('./demanda/demanda.module').then( m => m.DemandaPageModule)
+  },
+  {
+    path: 'cadastro-poste',
+    loadChildren: () => import('./cadastro-poste/cadastro-poste.module').then( m => m.CadastroPostePageModule)
+  },
+  {path: 'cadastro-poste/:id',
+    loadChildren: () => import('./cadastro-poste/cadastro-poste.module').then( m => m.CadastroPostePageModule)
   },
 ];
 

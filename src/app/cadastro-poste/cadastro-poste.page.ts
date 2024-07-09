@@ -3,11 +3,11 @@ import { RequisicaoService} from '../service/requisicao.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-cadastro-lampada',
-  templateUrl: './cadastro-lampada.page.html',
-  styleUrls: ['./cadastro-lampada.page.scss'],
+  selector: 'app-cadastro-poste',
+  templateUrl: './cadastro-poste.page.html',
+  styleUrls: ['./cadastro-poste.page.scss'],
 })
-export class CadastroLampadaPage implements OnInit {
+export class CadastroPostePage implements OnInit {
   public descricao:string = '';
   public id:number = 0;
   constructor(
@@ -21,7 +21,7 @@ export class CadastroLampadaPage implements OnInit {
         this.id = params.id;
         if (this.id != 0){
         this.rs.get({
-          controller:'lampada-get',
+          controller:'poste-get',
           id:this.id
         })
         .subscribe(
@@ -41,7 +41,7 @@ export class CadastroLampadaPage implements OnInit {
 
 salvar(){
   const fd = new FormData();
-  fd.append('controller', 'lampada');
+  fd.append('controller', 'poste');
   fd.append('id',String(this.id));
   fd.append('op', 'salvar');
   fd.append('id',String(this.id));
@@ -51,10 +51,9 @@ salvar(){
   this.rs.post(fd)
   .subscribe(
     () => {
-      location.href = '/listar-lampada';
+      location.href = '/listar-poste';
     }
   );
 }
 
 }
-//testeeeeeeee

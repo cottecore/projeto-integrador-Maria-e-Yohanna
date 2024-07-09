@@ -94,6 +94,7 @@
 
   .card1{
     text-align: center;
+    color: #d87921;
   }
 
   :root {
@@ -108,8 +109,8 @@
 
     display: block !important;
     float: left;
-    width: 40%; /*280px*/
-    height: 22%;
+    width: 38%; /*280px*/
+    height: 20%;
     
     
   }
@@ -118,21 +119,45 @@
     display: block !important;
     float: right;
     width: 38%; /*280px*/
-    height: 22%;
+    height: 20%;
   }
+
+  .feed{
+    width: 95%;
+    margin-left: 3%;
+  }
+
+  .graf{
+    width: 95%;
+    margin-left: 3%;
+  }
+
+  
+  .dem{
+    width: 95%;
+    margin-left: 3%;
+  }
+
+  
+  .perfil{
+    width: 95%;
+    margin-left: 3%;
+  }
+
+
   .AcessoRapido3 {
    
     display: block !important;
     float: left;
     width: 38%; /*280px*/
-    height: 22%;
+    height: 20%;
   }
   .AcessoRapido4 {
     
     display: block !important;
     float: right;
-    width: 40%; /*280px*/
-    height: 22%;
+    width: 38%; /*280px*/
+    height: 20%;
   }
 
 
