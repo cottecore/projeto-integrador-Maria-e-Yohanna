@@ -14,11 +14,12 @@ export class CadastroLampadaPage implements OnInit {
     public rs:RequisicaoService,
     private activated_router:ActivatedRoute
   ) {
-    if (this.id != 0){
+   
     this.activated_router.params
     .subscribe(
       (params:any)=> {
         this.id = params.id;
+        if (this.id != 0){
         this.rs.get({
           controller:'lampada-get',
           id:this.id
@@ -29,9 +30,10 @@ export class CadastroLampadaPage implements OnInit {
           }
         );
       }
+      }
     );
     }
-   }
+     
 
   ngOnInit() {
   }
