@@ -71,6 +71,22 @@ const routes: Routes = [
   {path: 'cadastro-poste/:id',
     loadChildren: () => import('./cadastro-poste/cadastro-poste.module').then( m => m.CadastroPostePageModule)
   },
+  {
+    path: 'feedback',
+    loadChildren: () => import('./feedback/feedback.module').then( m => m.FeedbackPageModule)
+  },
+  {
+    path: 'lista-poste',
+    loadChildren: () => import('./lista-poste/lista-poste.module').then( m => m.ListaPostePageModule)
+  },
+  {
+    path: 'listar-poste',
+    loadChildren: () => import('./listar-poste/listar-poste.module').then( m => m.ListarPostePageModule)
+  },
+  {
+    path: 'listagens',
+    loadChildren: () => import('./listagens/listagens.module').then( m => m.ListagensPageModule)
+  },
 ];
 
 @NgModule({

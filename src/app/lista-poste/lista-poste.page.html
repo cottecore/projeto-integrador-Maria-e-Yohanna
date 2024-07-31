@@ -1,0 +1,60 @@
+
+ 
+  
+    <ion-toolbar>
+      <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaLista-Poste" slot="start"></ion-icon>
+  
+      <ion-button shape="round" class="BAddPoste" color="favorite" routerLink="/cadastro-poste" slot="end"> <ion-icon name="add"></ion-icon> </ion-button>
+      
+    </ion-toolbar>
+ 
+
+<ion-content [fullscreen]="true">
+  
+
+  <img src="../../assets/VoltA.png">
+
+  
+
+
+  <ion-button id="open-modal" color="favorite" expand="block">Lista de postes</ion-button>
+
+  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+    <ng-template>
+      <ion-content>
+        <ion-searchbar placeholder="Pesquisar" (click)="modal.setCurrentBreakpoint(0.75)"></ion-searchbar>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="flash-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Poste de madeira</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger" class="IconT"></ion-icon>
+            <ion-icon name="create"  class="IconR"></ion-icon>            
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-icon name="flash-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Poste de concreto</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger"></ion-icon>
+              <ion-icon name="create"></ion-icon>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-icon name="flash-outline" slot="start"></ion-icon>
+            <ion-label>
+              <h2 class="textL">Poste de metal</h2>
+            </ion-label>
+            <ion-icon name="trash" color="danger"></ion-icon>
+              <ion-icon name="create"></ion-icon>
+          </ion-item>
+          <br>
+
+
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CadastroPostePage implements OnInit {
   public descricao:string = '';
+  public unidade:string = '';
   public id:number = 0;
   constructor(
     public rs:RequisicaoService,
@@ -27,6 +28,7 @@ export class CadastroPostePage implements OnInit {
         .subscribe(
           (_dados:any) => {
             this.descricao = _dados.descricao;
+            this.unidade = _dados.unidade;
           }
         );
       }
@@ -46,6 +48,7 @@ salvar(){
   fd.append('op', 'salvar');
   fd.append('id',String(this.id));
   fd.append('descricao',this.descricao);
+  fd.append('descricao',this.unidade);
 
 
   this.rs.post(fd)
