@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaPerfil"></ion-icon>
+
+
+
+  <h3 style="text-align: center; color: #d87921;">Informações de perfil:</h3>
+
+  <ion-list>
+    <ion-avatar>
+      <img class="imagem-perfil-p" alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <br>
+    <ion-item>
+      <ion-input [readonly]="true" label="Nome:" placeholder="Jorge Silva"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [readonly]="true" label="Email:" placeholder="funcionario.celesc@gmail.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [readonly]="true" label="Telefone:" type="tel" placeholder="**-****-****"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

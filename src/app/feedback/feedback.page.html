@@ -1,16 +1,52 @@
-<ion-header [translucent]="true">
+<!-- Menu Principal - Abre do lado -->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="favorite">
+      <ion-title>
+        <ion-icon name="person-circle" color="black"></ion-icon>
+      </ion-title>          
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label color="favorite">Gráfico</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label color="favorite" routerLink="/feedback">Feedback</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label color="favorite" routerLink="/demanda">Demanda</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label color="favorite" routerLink="/listagens">Listagens de demandas</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label color="favorite" routerLink="/perfil">Perfil</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-footer class="péHome"><ion-input [readonly]="true" class="no-click" placeholder="Informação para contato - voltAnalytics@gmail.com"></ion-input></ion-footer>
+  </ion-content>
+</ion-menu>
+<!-- Menu Principal - Abre do lado -->
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar  class="teste">
+       <ion-buttons slot="start">
+        <ion-menu-button color="favorite"></ion-menu-button>
+      </ion-buttons>
+     
+
+      <ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
+
+    </ion-toolbar>
+  </ion-header>
   
+<ion-content [fullscreen]="true">
+
   <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaFeed"></ion-icon>
   <img class="logoFeedback" style="margin-left: 15%; margin-right: 30%; width: 80%;" src="../../assets/VoltA.png">
  
   <ion-img id="img-Feed" src="../../assets/Feed-Img3.png"></ion-img>
-
-
- 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">feedback</ion-title>
-    </ion-toolbar>
-  </ion-header>
 </ion-content>

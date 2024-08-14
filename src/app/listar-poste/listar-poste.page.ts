@@ -15,6 +15,8 @@ export class ListarPostePage implements OnInit {
   ) { }
 
   public postes:Array<any> = [];
+  public isShowDeleteDialog:boolean = false;
+  public alertButtons:Array<any> = [];
   ngOnInit() {
     this.listar();
   }
@@ -34,14 +36,36 @@ export class ListarPostePage implements OnInit {
     this.router.navigateByUrl('/cadastro-poste/' + id);
   }
   
+
+  //deu errado refazer
   excluir(id:number){
-    this.requisicao_service.get({
-      controller:'poste-excluir',
-      id:id
-    })
+    this.isShowDeleteDialog = true;
+  this.alertButtons = [{
+    text: 'Não',
+    role: 'cancel',
+    handler: () => {
+      this.isShowDeleteDialog = false;
+    },
+  },
+  {
+    text: 'Sim',
+    role: 'confirm',
+    handler: () => {
+      this.requisicao_service.get({
+        controller:'poste-excluir',
+        id:id
+      })
+  
     .subscribe(() => {
       this.listar();
-    })
-  }
+    }
+  );
+},
+
+  }];
+  
 
 }
+
+}
+

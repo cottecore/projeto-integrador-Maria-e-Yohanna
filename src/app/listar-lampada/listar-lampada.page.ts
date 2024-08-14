@@ -19,6 +19,8 @@ export class ListarLampadaPage implements OnInit {
 
 
   public lampadas:Array<any> = [];
+  public isShowDeleteDialog:boolean = false;
+  public alertButtons:Array<any> = [];
   ngOnInit() {
     this.listar();
   }
@@ -32,12 +34,10 @@ export class ListarLampadaPage implements OnInit {
     this.requisicao_service.get({
       controller:'lampada-listar'
     })
-    .subscribe(
-      (_res:any) => {
+    .subscribe((_res:any) => {
         loading.dismiss();
         this.lampadas = _res;
-      }
-    );
+      });
   }
 
  
@@ -47,15 +47,30 @@ editar(id:number){
 }
 
 excluir(id:number){
-  this.requisicao_service.get({
-    controller:'lampada-excluir',
-    id:id
-  })
-  .subscribe(() => {
-    this.listar();
-  })
+  this.isShowDeleteDialog = true;
+  this.alertButtons = [{
+    text: 'Não',
+    role: 'cancel',
+    handler: () => {
+      this.isShowDeleteDialog = false;
+    },
+  },
+  {
+    text: 'Sim',
+    role: 'confirm',
+    handler: () => {
+      this.requisicao_service.get({
+        controller:'lampada-excluir',
+        id:id
+      })
+      .subscribe(() => {
+        this.listar();
+      })
+      ;
+    },
+  }];
+  
 }
-
 
 
 }

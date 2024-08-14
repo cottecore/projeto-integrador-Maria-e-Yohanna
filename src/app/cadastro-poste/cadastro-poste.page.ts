@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class CadastroPostePage implements OnInit {
   public descricao:string = '';
   public unidade:string = '';
+  public tipoPoste:string = '';
   public id:number = 0;
   constructor(
     public rs:RequisicaoService,
@@ -19,19 +20,22 @@ export class CadastroPostePage implements OnInit {
     this.activated_router.params
     .subscribe(
       (params:any)=> {
-        this.id = params.id;
-        if (this.id != 0){
-        this.rs.get({
-          controller:'poste-get',
-          id:this.id
-        })
-        .subscribe(
-          (_dados:any) => {
-            this.descricao = _dados.descricao;
-            this.unidade = _dados.unidade;
-          }
-        );
-      }
+        if (params.id != undefined){
+          this.id = params.id;
+          if (this.id != 0){
+          this.rs.get({
+            controller:'poste-get',
+            id:this.id
+          })
+          .subscribe(
+            (_dados:any) => {
+              this.descricao = _dados.descricao;
+              this.unidade = _dados.unidade;
+              this.tipoPoste = _dados.tipoPoste;
+            }
+          );
+        }
+        }  
       }
     );
     }
@@ -46,9 +50,9 @@ salvar(){
   fd.append('controller', 'poste');
   fd.append('id',String(this.id));
   fd.append('op', 'salvar');
-  fd.append('id',String(this.id));
   fd.append('descricao',this.descricao);
-  fd.append('descricao',this.unidade);
+  fd.append('unidade',this.unidade);
+  fd.append('tipoPoste',this.tipoPoste);
 
 
   this.rs.post(fd)

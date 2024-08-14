@@ -19,7 +19,8 @@ export class CadastroLampadaPage implements OnInit {
     .subscribe(
       (params:any)=> {
         this.id = params.id;
-        if (this.id != 0){
+        if (this.id != 0)
+        if (params.id != undefined){
         this.rs.get({
           controller:'lampada-get',
           id:this.id
@@ -44,7 +45,6 @@ salvar(){
   fd.append('controller', 'lampada');
   fd.append('id',String(this.id));
   fd.append('op', 'salvar');
-  fd.append('id',String(this.id));
   fd.append('descricao',this.descricao);
 
 

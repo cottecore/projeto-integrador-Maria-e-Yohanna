@@ -2,12 +2,19 @@
   
 
 <ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaListarPoste" slot="start"></ion-icon>
+    <ion-button routerLink="/cadastro-poste" color="favorite" class="bListarPoste">novo</ion-button>
+
+</ion-toolbar>
+<img src="../../assets/VoltA.png">
   
-  <ion-button routerLink="/cadastro-poste" color="favorite" class="bListar">novo</ion-button>
 
   <ion-list>
     <ion-item *ngFor="let poste of postes">
+      <ion-label slot="start">{{ poste.unidade}}</ion-label>
       <ion-label slot="start">{{ poste.descricao}}</ion-label>
+      <ion-label slot="start">{{ poste.tipoPoste}}</ion-label>
       <ion-icon name="create" (click)="editar(poste.id)" style="width: 30%; margin-left: 40%;"></ion-icon>
       <ion-icon name="trash" (click)="excluir(poste.id)" color="danger"></ion-icon>
     </ion-item>

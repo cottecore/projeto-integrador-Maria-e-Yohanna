@@ -87,6 +87,10 @@ const routes: Routes = [
     path: 'listagens',
     loadChildren: () => import('./listagens/listagens.module').then( m => m.ListagensPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 ];
 
 @NgModule({
