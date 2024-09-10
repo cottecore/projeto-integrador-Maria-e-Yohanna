@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { TraducaoService } from './traducao.service';
 
 
 @Injectable({
@@ -8,10 +9,12 @@ import { Injectable } from '@angular/core';
 export class RequisicaoService {
 
   constructor(
-    public http:HttpClient
+    public http:HttpClient,
+    public traducao_service:TraducaoService
   ) { }
 
   get(dados:any) {
+    dados ['idioma'] = this.traducao_service.getIdioma();
     return this.http.get('/requisicao', {
       params:dados
     });

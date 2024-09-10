@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaDashboard"></ion-icon>
+
+  <ion-card color="favorite">
+    <ion-card-header>
+      <ion-icon name="podium-outline"></ion-icon>
+      <ion-card-subtitle>Casos encontrados</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <h1 class="icon-card-value-dashboard">20</h1>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card color="favorite">
+    <ion-card-header>
+      <ion-icon name="stats-chart-outline"></ion-icon>
+      <ion-card-subtitle>Itens adicionados</ion-card-subtitle>
+  
+    </ion-card-header>
+    <ion-card-content>
+      <h1 class="icon-card-value-dashboard">03</h1>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="card">
+    <p-chart type="bar" [data]="data" [options]="options" />
+  </div>
+
+  <div class="card flex justify-content-center">
+    <p-chart type="pie" [data]="data2" [options]="options2" />
+  </div>  
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaConfig"></ion-icon>
+
+  <ion-list>
+    <ion-item>
+      <ion-select  label="Idioma" [(ngModel)]="idioma" (ionChange)="setarIdioma()" >
+        <ion-select-option value="pt_br">Português (Brasil)</ion-select-option>
+        <ion-select-option value="en_us">Inglês (Estados Unidos)</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

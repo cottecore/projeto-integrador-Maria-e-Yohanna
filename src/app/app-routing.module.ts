@@ -91,6 +91,26 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
+  {
+    path: 'configuracoes',
+    loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+  },
+  {
+    path: 'grafico',
+    loadChildren: () => import('./grafico/grafico.module').then( m => m.GraficoPageModule)
+  },
+  {
+    path: 'conjunto-grafico',
+    loadChildren: () => import('./conjunto-grafico/conjunto-grafico.module').then( m => m.ConjuntoGraficoPageModule)
+  },
+  {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
 ];
 
 @NgModule({

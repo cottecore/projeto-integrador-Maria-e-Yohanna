@@ -5,28 +5,34 @@
       <ion-header>
         <ion-toolbar color="favorite">
           <ion-title>
-            <ion-icon name="person-circle" color="black"></ion-icon>
+            <ion-icon name="person-circle" color="black" routerLink="/perfil"></ion-icon>
           </ion-title>          
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
         <ion-list lines="full">
           <ion-item>
-            <ion-label color="favorite">Gráfico</ion-label>
+            <ion-label color="favorite">{{ traducao_service.traducao(texto.grafico) }}</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label color="favorite" routerLink="/feedback">Feedback</ion-label>
+            <ion-label color="favorite" routerLink="/feedback">{{ traducao_service.traducao(texto.feedback) }}</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label color="favorite" routerLink="/demanda">Demanda</ion-label>
+            <ion-label color="favorite" routerLink="/demanda">{{ traducao_service.traducao(texto.demanda) }}</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label color="favorite" routerLink="/listagens">Listagens de demandas</ion-label>
+            <ion-label color="favorite" routerLink="/perfil">{{ traducao_service.traducao(texto.perfil)}}</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label color="favorite" routerLink="/perfil">Perfil</ion-label>
+            <ion-label color="favorite" routerLink="/listagens">{{ traducao_service.traducao(texto.listagem) }}</ion-label>
           </ion-item>
-        </ion-list>
+          <ion-item>
+            <ion-label color="favorite" routerLink="/configuracoes">{{ traducao_service.traducao(texto.configuracoes) }}</ion-label>
+          </ion-item>
+        <ion-item>
+          <ion-label color="favorite" routerLink="/dashboard">Dashboard</ion-label>
+        </ion-item>
+      </ion-list>
 
         <ion-footer class="péHome"><ion-input [readonly]="true" class="no-click" placeholder="Informação para contato - voltAnalytics@gmail.com"></ion-input></ion-footer>
       </ion-content>
@@ -46,18 +52,20 @@
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
+        
         <ion-card>
-          <ion-card-title class="card1">Bom te ver aqui!</ion-card-title>
+          <ion-card-title class="card1">{{ traducao_service.traducao(texto.saudacao) }}</ion-card-title>
+          <p class="img-Home-Txt">{{ traducao_service.traducao(texto.boas_vindas) }}</p>
           <img src="../../assets/imgHome.png" />
           
-        
         </ion-card>
+        
       
         <ion-card color="light" class="cardApp" class="AcessoRapido1">
           
           <ion-card-content>
-            <img class="graf" src="../../assets/grafico.png"/> 
-            <p style="text-align: center;" class="colorText">Gráfico</p> 
+            <img class="graf" src="../../assets/grafico.png" routerLink="/conjunto-grafico"/> 
+            <p style="text-align: center;" class="colorText">{{ traducao_service.traducao(texto.grafico) }}</p> 
           </ion-card-content>
         </ion-card>
 
@@ -65,14 +73,14 @@
           
           <ion-card-content> 
             <img  class="feed" routerLink="/feedback" src="../../assets/eletricista.png"/> 
-            <p style="text-align: center;" routerLink="/feedback" class="colorText">Feedback</p> 
+            <p style="text-align: center;" routerLink="/feedback" class="colorText">{{ traducao_service.traducao(texto.feedback) }}</p> 
           </ion-card-content>
         </ion-card>
 
         <ion-card color="light" class="cardApp" class="AcessoRapido3">
           <ion-card-content > 
             <img class="dem" routerLink="/demanda" src="../../assets/poste.png"/> 
-            <p style="text-align: center;" routerLink="/demanda" class="colorText">Demanda</p> 
+            <p style="text-align: center;" routerLink="/demanda" class="colorText">{{ traducao_service.traducao(texto.demanda) }}</p> 
           </ion-card-content>
         </ion-card>
 
@@ -80,10 +88,10 @@
         
           <ion-card-content> 
           <img class="perfil" routerLink="/perfil" src="../../assets/perfil.png"/>
-          <p style="text-align: center;" class="colorText">Perfil</p>
+          <p style="text-align: center;" class="colorText" routerLink="/perfil">{{ traducao_service.traducao(texto.perfil) }}</p>
          </ion-card-content>
         </ion-card>
-
+        <p class="img-Home-Txt2" routerLink="/listagens">{{ traducao_service.traducao(texto.listagem) }}</p>
         <img class="ListaHome" src="../../assets/Home-Listagens.png" routerLink="/listagens">
  
 
