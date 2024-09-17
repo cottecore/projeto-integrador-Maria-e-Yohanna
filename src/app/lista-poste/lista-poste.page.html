@@ -1,17 +1,18 @@
 
  
-  
+  <app-menu content-id="main-content-lista-poste"></app-menu>
     <ion-toolbar>
-      <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaLista-Poste" slot="start"></ion-icon>
-  
-      <ion-button shape="round" class="BAddPoste" color="favorite" routerLink="/cadastro-poste" slot="end"> <ion-icon name="add"></ion-icon> </ion-button>
-      
+      <ion-buttons slot="start">
+        <ion-menu-button color="favorite"></ion-menu-button>
+      </ion-buttons>   
     </ion-toolbar>
  
+   
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" id="main-content-lista-poste">
   
-
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaLista-Poste" ></ion-icon>
+  <ion-button shape="round" class="BAddPoste" color="favorite" routerLink="/cadastro-poste" > <ion-icon name="add"></ion-icon> </ion-button>
   <img src="../../assets/VoltA.png">
 
   

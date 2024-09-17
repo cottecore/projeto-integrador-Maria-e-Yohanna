@@ -7,13 +7,12 @@
       </ion-buttons>
      
 
-      <ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
-
+      
     </ion-toolbar>
   </ion-header>
   
 <ion-content [fullscreen]="true" id="main-content-listagens">
-  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaListagens"></ion-icon>
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListagens"></ion-icon>
   <p class="Txt-listar-lamp" routerLink="/listar-lampada">Lista de lâmpadas</p>
   
   <img class="logoListagens" src="../../assets/VoltA.png">

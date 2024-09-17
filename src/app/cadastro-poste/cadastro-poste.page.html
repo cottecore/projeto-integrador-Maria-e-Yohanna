@@ -3,7 +3,8 @@
   <ion-menu-button color="favorite"></ion-menu-button>
 </ion-buttons>
 <ion-content [fullscreen]="true" id="main-content-cadastroposte">
-  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaCadPoste"></ion-icon>
+  <ion-icon name="return-up-back-outline" class="bttVoltarCadastro-poste" color="favorite" style="margin-left: 5%; "  (click)="go ('/demanda')"></ion-icon>
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaCadPoste"></ion-icon>
 
   <ion-img style="width: 70%; margin-left: 15%;" src="../../assets/VoltA.png"></ion-img>
 

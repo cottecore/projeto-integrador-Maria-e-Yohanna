@@ -8,7 +8,8 @@
  
 
 <ion-content [fullscreen]="true" id="main-content-grafico">
-  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaGraf-poste"></ion-icon>
+  <ion-icon name="return-up-back-outline" class="bttVoltargrafico" color="favorite" style="margin-left: 5%; margin-top: 5%;"  (click)="go ('/conjunto-grafico')"></ion-icon>
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaGraf"></ion-icon>
 
   <p-chart type="pie" [data]="data2" /> 
   <div class="card">

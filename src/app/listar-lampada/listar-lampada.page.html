@@ -6,8 +6,9 @@
 
 <ion-content [fullscreen]="true" id="main-content-listarlampada">
   <ion-toolbar>
-    <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaListarLamp" slot="start"></ion-icon>
-    <ion-button routerLink="/cadastro-lampada" color="favorite" class="bListar" slot="end">novo</ion-button>
+    <ion-icon name="return-up-back-outline" class="bttVoltarListar-lamp" color="favorite" (click)="go ('/listagens')"></ion-icon>
+    <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListarLamp" ></ion-icon>
+    <ion-button (click)="go ('/cadastro-lampada')" color="favorite" class="bListar" slot="end">novo</ion-button>
   </ion-toolbar>
 
   <img src="../../assets/VoltA.png">

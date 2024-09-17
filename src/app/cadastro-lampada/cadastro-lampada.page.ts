@@ -56,5 +56,9 @@ salvar(){
   );
 }
 
+go(rota:string){
+  window.location.href = rota;
+} 
+
 }
 //testeeeeeeee

@@ -6,7 +6,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" id="main-content-graficolamp">
-  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaGraf-lamp"></ion-icon>
+  <ion-icon name="return-up-back-outline" class="bttVoltargrafico-lamp" color="favorite" style="margin-left: 5%; margin-top: 5%;"  (click)="go ('/conjunto-grafico')"></ion-icon>
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaGraf-lamp"></ion-icon>
 
   <p-chart type="bar" [data]="data" [options]="options" />
 

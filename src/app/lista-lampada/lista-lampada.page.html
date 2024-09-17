@@ -1,13 +1,16 @@
-<ion-header [translucent]="true">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="favorite"></ion-menu-button>
+    </ion-buttons>    
+  </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ListaLampadas</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<app-menu content-id="main-content-lista-lampada"></app-menu>
+<ion-content [fullscreen]="true" class="ion-padding" id="main-content-lista-lampada">
+  
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListalampada"></ion-icon>
+ 
 
   <ion-button shape="round" class="BAddEmail" color="favorite" routerLink="/cadastro-lampada" > <ion-icon name="add"></ion-icon> </ion-button>
   <img src="../../assets/VoltA.png">

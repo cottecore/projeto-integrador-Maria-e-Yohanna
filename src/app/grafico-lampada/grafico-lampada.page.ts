@@ -82,6 +82,11 @@ export class GraficoLampadaPage implements OnInit {
         };
     }
 
+    go(rota:string){
+        window.location.href = rota;
+      }  
+    
+
   }
 
   

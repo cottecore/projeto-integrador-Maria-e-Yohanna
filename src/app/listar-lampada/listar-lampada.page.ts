@@ -73,4 +73,8 @@ excluir(id:number){
 }
 
 
+go(rota:string){
+  window.location.href = rota;
+}  
+
 }

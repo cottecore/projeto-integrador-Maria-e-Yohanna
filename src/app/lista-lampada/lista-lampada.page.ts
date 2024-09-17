@@ -12,4 +12,10 @@ export class ListaLampadaPage implements OnInit {
   ngOnInit() {
   }
 
+  go(rota:string){
+    window.location.href = rota;
+  }  
+
+
 }
+

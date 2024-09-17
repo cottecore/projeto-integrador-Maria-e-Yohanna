@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ListaPostePageRoutingModule } from './lista-poste-routing.module';
 
 import { ListaPostePage } from './lista-poste.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListaPostePageRoutingModule
+    ListaPostePageRoutingModule,
+     MenuPageModule
   ],
   declarations: [ListaPostePage]
 })

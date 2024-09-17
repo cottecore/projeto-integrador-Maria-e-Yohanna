@@ -6,8 +6,9 @@
 </ion-header>
 <ion-content [fullscreen]="true" id="main-content-listarposte">
   <ion-toolbar>
-    <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaListarPoste" slot="start"></ion-icon>
-    <ion-button routerLink="/cadastro-poste" color="favorite" class="bListarPoste">novo</ion-button>
+    <ion-icon name="return-up-back-outline" class="bttVoltarListar-poste" color="favorite" (click)="go ('/listagens')"></ion-icon>
+    <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListarPoste"></ion-icon>
+    <ion-button routerLink="/cadastro-poste" color="favorite" class="bListarPoste" slot="end">novo</ion-button>
 
 </ion-toolbar>
 <img src="../../assets/VoltA.png">

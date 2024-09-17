@@ -92,4 +92,9 @@ public data2: any;
 
     }
 
+    go(rota:string){
+        window.location.href = rota;
+      }  
+    
+
 }
