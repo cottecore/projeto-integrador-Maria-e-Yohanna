@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DemandaPageRoutingModule } from './demanda-routing.module';
 
 import { DemandaPage } from './demanda.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { DemandaPage } from './demanda.page';
     FormsModule,
     IonicModule,
     DemandaPageRoutingModule,
+    MenuPageModule
   ],
   declarations: [DemandaPage],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA]

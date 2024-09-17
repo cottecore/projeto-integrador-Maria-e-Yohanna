@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ListarLampadaPageRoutingModule } from './listar-lampada-routing.module';
 
 import { ListarLampadaPage } from './listar-lampada.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListarLampadaPageRoutingModule
+    ListarLampadaPageRoutingModule,
+    MenuPageModule
   ],
   declarations: [ListarLampadaPage]
 })

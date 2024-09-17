@@ -1,7 +1,10 @@
-
-  
-
-<ion-content [fullscreen]="true">
+<app-menu content-id="main-content-listarposte"></app-menu>
+  <ion-header>
+<ion-buttons slot="start">
+  <ion-menu-button color="favorite"></ion-menu-button>
+</ion-buttons>
+</ion-header>
+<ion-content [fullscreen]="true" id="main-content-listarposte">
   <ion-toolbar>
     <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaListarPoste" slot="start"></ion-icon>
     <ion-button routerLink="/cadastro-poste" color="favorite" class="bListarPoste">novo</ion-button>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { FeedbackPageRoutingModule } from './feedback-routing.module';
 
 import { FeedbackPage } from './feedback.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FeedbackPageRoutingModule
+    FeedbackPageRoutingModule,
+    MenuPageModule
   ],
   declarations: [FeedbackPage]
 })

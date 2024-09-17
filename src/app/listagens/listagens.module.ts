@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ListagensPageRoutingModule } from './listagens-routing.module';
 
 import { ListagensPage } from './listagens.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListagensPageRoutingModule
+    ListagensPageRoutingModule,
+    MenuPageModule
   ],
   declarations: [ListagensPage]
 })

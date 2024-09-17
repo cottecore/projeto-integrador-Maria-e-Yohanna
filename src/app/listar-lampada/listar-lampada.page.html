@@ -1,7 +1,10 @@
+<app-menu content-id="main-content-listarlampada"></app-menu>
 <ion-header [translucent]="true"></ion-header>
+<ion-buttons slot="start">
+  <ion-menu-button color="favorite"></ion-menu-button>
+</ion-buttons>
 
-
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" id="main-content-listarlampada">
   <ion-toolbar>
     <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaListarLamp" slot="start"></ion-icon>
     <ion-button routerLink="/cadastro-lampada" color="favorite" class="bListar" slot="end">novo</ion-button>

@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { GraficoPageRoutingModule } from './grafico-routing.module';
 
 import { GraficoPage } from './grafico.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { GraficoPage } from './grafico.page';
     FormsModule,
     IonicModule,
     GraficoPageRoutingModule,
-    ChartModule
+    ChartModule,
+    MenuPageModule
 
   ],
   declarations: [GraficoPage]

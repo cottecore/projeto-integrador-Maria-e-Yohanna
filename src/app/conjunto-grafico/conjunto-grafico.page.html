@@ -1,15 +1,19 @@
+<app-menu content-id="main-content-conjunto"></app-menu>
 <ion-header [translucent]="true">
-
+  <ion-buttons slot="start">
+    <ion-menu-button color="favorite"></ion-menu-button>
+  </ion-buttons>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" id="main-content-conjunto">
   <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaGraf"></ion-icon>
-  <img class="logoDemanda" style="width: 85%; margin-left: 7%;" src="../../assets/VoltA.png">
+  <img class="logoDemanda" style="width: 85%; margin-left: 7%;" src="../../assets/VoltA.png" />
   
+  <h3 style="text-align: center; color: #d87921;">Gráficos das demandas dos produtos:</h3>
 
-  <p class="Graf-tipo-poste-txt" routerLink="/grafico">Gráfico dos<br> ultimos meses</p>
-  <img class="Grafic-conjTipo" routerLink="/grafico" src="../../assets/Graf-tipo-poste.png"/> 
-  <p class="Grafic-Usuario-txt" routerLink="/cadastro-lampada">Cadastre um <br>novo gráfico</p>
-  <img class="Grafic-usuario" routerLink="/grafico" src="../../assets/Graf-tipo-poste.png"/> 
+  <p class="Graf-tipo-poste-txt"  (click)="go ('/grafico')">Gráfico dos tipos de postes</p>
+  <img class="Grafic-conjTipo"  (click)="go ('/grafico')" src="../../assets/Graf-tipo-poste.png"/> 
+  <p class="Grafic-Usuario-txt"  (click)="go ('/grafico-lampada')">Gráfico dos tipos de lâmpadas</p>
+  <img class="Grafic-usuario" src="../../assets/Graf-tipo-poste.png"/> 
 
 </ion-content>

@@ -1,7 +1,10 @@
+<app-menu content-id="main-content-dashboard"></app-menu>
 <ion-header [translucent]="true">
-  
+  <ion-buttons slot="start">
+    <ion-menu-button color="favorite"></ion-menu-button>
+  </ion-buttons>
 </ion-header>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" id="main-content-dashboard">
   <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaDashboard"></ion-icon>
 
   <ion-card color="favorite">

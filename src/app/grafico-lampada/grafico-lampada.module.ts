@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListarPostePageRoutingModule } from './listar-poste-routing.module';
+import { GraficoLampadaPageRoutingModule } from './grafico-lampada-routing.module';
 
-import { ListarPostePage } from './listar-poste.page';
+import { GraficoLampadaPage } from './grafico-lampada.page';
+import { ChartModule } from 'primeng/chart';
 import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
@@ -14,9 +15,10 @@ import { MenuPageModule } from '../menu/menu.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ListarPostePageRoutingModule,
+    GraficoLampadaPageRoutingModule,
+    ChartModule,
     MenuPageModule
   ],
-  declarations: [ListarPostePage]
+  declarations: [GraficoLampadaPage]
 })
-export class ListarPostePageModule {}
+export class GraficoLampadaPageModule {}

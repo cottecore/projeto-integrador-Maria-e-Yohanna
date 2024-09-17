@@ -11,5 +11,8 @@ export class DemandaPage implements OnInit {
 
   ngOnInit() {
   }
+  go(rota:string){
+    window.location.href = rota;
+  }  
 
 }

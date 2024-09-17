@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ConjuntoGraficoPageRoutingModule } from './conjunto-grafico-routing.module';
 
 import { ConjuntoGraficoPage } from './conjunto-grafico.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ConjuntoGraficoPageRoutingModule
+    ConjuntoGraficoPageRoutingModule,
+    MenuPageModule
   ],
   declarations: [ConjuntoGraficoPage]
 })

@@ -21,6 +21,8 @@ export class ConfiguracoesPage implements OnInit {
     this.traducao_service.setIdioma(this.idioma);
   }
 
- 
+  go(rota:string){
+    window.location.href = rota;
+  }
 }
 

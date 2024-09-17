@@ -1,0 +1,13 @@
+<app-menu content-id="main-content-graficolamp"></app-menu>
+<ion-header [translucent]="true">
+  <ion-buttons slot="start">
+    <ion-menu-button color="favorite"></ion-menu-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="main-content-graficolamp">
+  <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaGraf-lamp"></ion-icon>
+
+  <p-chart type="bar" [data]="data" [options]="options" />
+
+</ion-content>

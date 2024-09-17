@@ -1,37 +1,4 @@
-
-  
-   <!-- Menu Principal - Abre do lado -->
-    <ion-menu contentId="main-content2">
-      <ion-header>
-        <ion-toolbar color="favorite">
-          <ion-title>
-            <ion-icon name="person-circle" color="black"></ion-icon>
-          </ion-title>          
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
-        <ion-list lines="full">
-          <ion-item>
-            <ion-label color="favorite">Gráfico</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label color="favorite" routerLink="/feedback">Feedback</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label color="favorite" routerLink="/demanda">Demanda</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label color="favorite" routerLink="/listagens">Listagens de demandas</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label color="favorite" routerLink="/perfil">Perfil</ion-label>
-          </ion-item>
-        </ion-list>
-
-        <ion-footer class="péHome"><ion-input [readonly]="true" class="no-click" placeholder="Informação para contato - voltAnalytics@gmail.com"></ion-input></ion-footer>
-      </ion-content>
-    </ion-menu>
-    <!-- Menu Principal - Abre do lado -->
+<app-menu content-id="main-content-demanda"></app-menu>
 
     <ion-header>
       <ion-toolbar  class="teste">
@@ -45,7 +12,7 @@
       </ion-toolbar>
     </ion-header>    
 
-<ion-content [fullscreen]="true" id="main-content2"> 
+<ion-content [fullscreen]="true" id="main-content-demanda"> 
   
   
   <ion-icon name="home-outline" color="favorite" routerLink="/home" class="casaDemanda"></ion-icon>
@@ -54,10 +21,10 @@
 
   <img class="logoDemanda" style="margin-left: 15%; margin-right: 30%;" src="../../assets/VoltA.png">
  
-  <p class="demanda-lamp-txt" routerLink="/cadastro-lampada">Cadastre a <br>sua lâmpada</p>
-    <img class="demandalampcard" routerLink="/cadastro-lampada" src="../../assets/demanda-lamp.png"/> 
-    <p class="demanda-poste-txt" routerLink="/cadastro-poste">Cadastre o <br>seu poste</p>
-    <img class="demandapostcard" routerLink="/cadastro-poste" src="../../assets/demanda-poste.png"/> 
+  <p class="demanda-lamp-txt" (click)="go ('/cadastro-lampada')">Cadastre a <br>sua lâmpada</p>
+    <img class="demandalampcard" (click)="go ('/cadastro-lampada')" src="../../assets/demanda-lamp.png"/> 
+    <p class="demanda-poste-txt" (click)="go ('/cadastro-poste')">Cadastre o <br>seu poste</p>
+    <img class="demandapostcard" (click)="go ('/cadastro-poste')" src="../../assets/demanda-poste.png"/> 
  
  
 

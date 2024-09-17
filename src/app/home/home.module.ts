@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-import { Etapa3Page } from '../apresentacao/etapa3/etapa3.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
@@ -13,8 +13,10 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MenuPageModule
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule {
+}
