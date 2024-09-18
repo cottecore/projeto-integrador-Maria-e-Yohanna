@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ListaEmailPageRoutingModule } from './lista-email-routing.module';
 
 import { ListaEmailPage } from './lista-email.page';
+import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListaEmailPageRoutingModule
+    ListaEmailPageRoutingModule,
+    MenuPageModule
   ],
   declarations: [ListaEmailPage]
 })

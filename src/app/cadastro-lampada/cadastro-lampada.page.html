@@ -1,16 +1,19 @@
 
 <app-menu content-id="main-content-cadastrolamp"></app-menu>
-<ion-content [fullscreen]="true" id="main-content-cadastrolamp">
-  <ion-header>
+<ion-header>
+  <ion-toolbar>
   <ion-buttons slot="start">
     <ion-menu-button color="favorite"></ion-menu-button>
   </ion-buttons>
+  <ion-img id="img-logo"src="../../assets/VoltA.png"></ion-img>
+</ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="true" id="main-content-cadastrolamp">
+ 
 <ion-icon name="return-up-back-outline" class="bttVoltarCadastro-lamp" color="favorite" style="margin-left: 5%; "  (click)="go ('/demanda')"></ion-icon>
 <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casa"></ion-icon>
 
-  <ion-img src="../../assets/VoltA.png"></ion-img>
-
+  <div class="CadLamp-text">
     <ion-label color="favorite" class="LampSty">
       <h1>Cadastre sua lâmpada</h1>
     </ion-label>
@@ -24,7 +27,7 @@
   <ion-button (click)="salvar()" shape="round" fill="outline" color="favorite" class="botaoAcessar" style="width: 30%; margin-left: 35%;">Cadastrar</ion-button>
   
   </div>
-
+</div>
 
 
 </ion-content>

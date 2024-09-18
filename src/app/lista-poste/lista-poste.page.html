@@ -4,7 +4,9 @@
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button color="favorite"></ion-menu-button>
+        
       </ion-buttons>   
+      <ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
     </ion-toolbar>
  
    
@@ -12,8 +14,10 @@
 <ion-content [fullscreen]="true" id="main-content-lista-poste">
   
   <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaLista-Poste" ></ion-icon>
-  <ion-button shape="round" class="BAddPoste" color="favorite" routerLink="/cadastro-poste" > <ion-icon name="add"></ion-icon> </ion-button>
-  <img src="../../assets/VoltA.png">
+  <ion-button shape="round" class="BAddPoste" color="favorite" routerLink="/cadastro-poste"> <ion-icon name="add"></ion-icon> </ion-button>
+
+
+ 
 
   
 

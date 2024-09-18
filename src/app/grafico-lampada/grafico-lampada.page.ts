@@ -20,25 +20,43 @@ export class GraficoLampadaPage implements OnInit {
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
         this.data = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
             datasets: [
                 {
                     type: 'bar',
-                    label: 'Dataset 1',
+                    label: 'LED',
                     backgroundColor: documentStyle.getPropertyValue('--blue-500'),
-                    data: [50, 25, 12, 48, 90, 76, 42]
+                    data: [50, 25, 12, 48, 90, 76, 42, 60, 98, 37, 87, 54]
                 },
                 {
                     type: 'bar',
-                    label: 'Dataset 2',
+                    label: 'Fluorescente',
                     backgroundColor: documentStyle.getPropertyValue('--green-500'),
-                    data: [21, 84, 24, 75, 37, 65, 34]
+                    data: [21, 84, 24, 75, 37, 65, 34, 50, 76, 65, 28, 72]
                 },
                 {
                     type: 'bar',
-                    label: 'Dataset 3',
+                    label: 'Incandescente',
                     backgroundColor: documentStyle.getPropertyValue('--yellow-500'),
-                    data: [41, 52, 24, 74, 23, 21, 32]
+                    data: [41, 52, 24, 74, 23, 21, 32, 40, 57, 88, 42, 66]
+                },
+                {
+                    type: 'bar',
+                    label: 'Halogênio',
+                    backgroundColor: documentStyle.getPropertyValue('--purple-500'),
+                    data: [30, 55, 70, 58, 59, 84, 62, 78, 55, 98, 43, 59]
+                },
+                {
+                    type: 'bar',
+                    label: 'Filamento',
+                    backgroundColor: documentStyle.getPropertyValue('--orange-500'),
+                    data: [30, 55, 80, 20, 59, 23, 32, 38, 67, 23, 76, 68]
+                },
+                {
+                    type: 'bar',
+                    label: 'Inteligente',
+                    backgroundColor: documentStyle.getPropertyValue('--red-500'),
+                    data: [30, 55, 50, 80, 59, 86, 92, 25, 88, 29, 11, 37]
                 }
             ]
         };

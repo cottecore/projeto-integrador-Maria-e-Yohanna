@@ -14,7 +14,7 @@ public data2: any;
 
   ngOnInit() {
     this.data2 = {
-      labels: ['A', 'B', 'C'],
+      labels: ['Poste de metal', 'Poste de madeira', 'Poste de concreto'],
       datasets: [
         {
           data: [540, 325, 702]
@@ -29,25 +29,25 @@ public data2: any;
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
     this.data = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
         datasets: [
             {
                 type: 'bar',
-                label: 'Dataset 1',
+                label: 'Poste de metal',
                 backgroundColor: documentStyle.getPropertyValue('--blue-500'),
-                data: [50, 25, 12, 48, 90, 76, 42]
+                data: [50, 25, 12, 48, 90, 76, 42, 60, 98, 37, 87, 54]
             },
             {
                 type: 'bar',
-                label: 'Dataset 2',
+                label: 'Poste de madeira',
                 backgroundColor: documentStyle.getPropertyValue('--green-500'),
-                data: [21, 84, 24, 75, 37, 65, 34]
+                data: [41, 52, 24, 74, 23, 21, 32, 40, 57, 88, 42, 66]
             },
             {
                 type: 'bar',
-                label: 'Dataset 3',
+                label: 'Poste de concreto',
                 backgroundColor: documentStyle.getPropertyValue('--yellow-500'),
-                data: [41, 52, 24, 74, 23, 21, 32]
+                data: [30, 55, 70, 58, 59, 84, 62, 78, 55, 98, 43, 59]
             }
         ]
     };

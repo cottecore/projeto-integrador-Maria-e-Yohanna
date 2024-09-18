@@ -2,18 +2,17 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button color="favorite"></ion-menu-button>
-    </ion-buttons>    
+    </ion-buttons>
+    <ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
   </ion-toolbar>
 </ion-header>
 
 <app-menu content-id="main-content-lista-lampada"></app-menu>
 <ion-content [fullscreen]="true" class="ion-padding" id="main-content-lista-lampada">
   
-  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListalampada"></ion-icon>
+  <ion-button shape="round" class="BAddlista-lamp" color="favorite"  (click)="go ('/cadastro-lampada')" > <ion-icon name="add"></ion-icon> </ion-button>
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListalampada" ></ion-icon>
  
-
-  <ion-button shape="round" class="BAddEmail" color="favorite" routerLink="/cadastro-lampada" > <ion-icon name="add"></ion-icon> </ion-button>
-  <img src="../../assets/VoltA.png">
 
 
   <ion-button id="open-modal" color="favorite" expand="block">Lista de lâmpadas</ion-button>

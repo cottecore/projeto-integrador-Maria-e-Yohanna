@@ -1,8 +1,10 @@
 <app-menu content-id="main-content-dashboard"></app-menu>
 <ion-header [translucent]="true">
+  <ion-toolbar>
   <ion-buttons slot="start">
     <ion-menu-button color="favorite"></ion-menu-button>
   </ion-buttons>
+</ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" id="main-content-dashboard">
   <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaDashboard"></ion-icon>
@@ -10,22 +12,22 @@
   <ion-card color="favorite">
     <ion-card-header>
       <ion-icon name="podium-outline"></ion-icon>
-      <ion-card-subtitle>Casos encontrados</ion-card-subtitle>
+      <ion-card-subtitle>Trabalhos realizados</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
-      <h1 class="icon-card-value-dashboard">20</h1>
+      <h1 class="icon-card-value-dashboard">30</h1>
     </ion-card-content>
   </ion-card>
   
   <ion-card color="favorite">
     <ion-card-header>
       <ion-icon name="stats-chart-outline"></ion-icon>
-      <ion-card-subtitle>Itens adicionados</ion-card-subtitle>
+      <ion-card-subtitle>Trabalhos adicionadas</ion-card-subtitle>
   
     </ion-card-header>
     <ion-card-content>
-      <h1 class="icon-card-value-dashboard">03</h1>
+      <h1 class="icon-card-value-dashboard">05</h1>
     </ion-card-content>
   </ion-card>
 

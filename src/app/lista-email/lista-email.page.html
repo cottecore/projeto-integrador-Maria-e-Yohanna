@@ -1,16 +1,17 @@
-<ion-header [translucent]="true">
-</ion-header>
-
-<ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header collapse="condense">
+<app-menu content-id="main-content-lista-email"></app-menu>
+<ion-content [fullscreen]="true" class="ion-padding" id="main-content-lista-email">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">ListaEmail</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button color="favorite"></ion-menu-button>
+      </ion-buttons>
+      <ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
     </ion-toolbar>
   </ion-header>
 
   <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListagemUsuario"></ion-icon>
-  <ion-button shape="round" class="BAddEmail" color="favorite" routerLink="/cadastro" > <ion-icon name="add"></ion-icon> </ion-button>
-  <img src="../../assets/VoltA.png">
+  <ion-button shape="round" class="BAddEmail" color="favorite"  (click)="go ('/cadastro')" > <ion-icon name="add"></ion-icon> </ion-button>
+  
 
 
   <ion-button id="open-modal" color="favorite" expand="block">Lista de Usuários</ion-button>

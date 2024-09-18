@@ -1,19 +1,20 @@
 <app-menu content-id="main-content-listarposte"></app-menu>
   <ion-header>
+    <ion-toolbar>
 <ion-buttons slot="start">
   <ion-menu-button color="favorite"></ion-menu-button>
 </ion-buttons>
-</ion-header>
-<ion-content [fullscreen]="true" id="main-content-listarposte">
-  <ion-toolbar>
-    <ion-icon name="return-up-back-outline" class="bttVoltarListar-poste" color="favorite" (click)="go ('/listagens')"></ion-icon>
-    <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListarPoste"></ion-icon>
-    <ion-button routerLink="/cadastro-poste" color="favorite" class="bListarPoste" slot="end">novo</ion-button>
-
+<ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
 </ion-toolbar>
-<img src="../../assets/VoltA.png">
-  
+</ion-header>
 
+
+<ion-content [fullscreen]="true" id="main-content-listarposte">
+
+  <ion-button (click)="go ('/cadastro-poste')" color="favorite" class="bListarPoste">novo</ion-button>
+<ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListarPoste"></ion-icon>
+
+<div class="teste">
   <ion-list>
     <ion-item *ngFor="let poste of postes">
       <ion-label slot="start">{{ poste.unidade}}</ion-label>
@@ -23,5 +24,6 @@
       <ion-icon name="trash" (click)="excluir(poste.id)" color="danger"></ion-icon>
     </ion-item>
   </ion-list>
+</div>
 
 </ion-content>
