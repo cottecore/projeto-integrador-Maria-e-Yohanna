@@ -10,6 +10,7 @@
 
 
 <ion-content [fullscreen]="true" id="main-content-listarposte">
+  <ion-icon name="return-up-back-outline" class="bttVoltarListar-poste" color="favorite" (click)="go ('/listagens')"></ion-icon>
 
   <ion-button (click)="go ('/cadastro-poste')" color="favorite" class="bListarPoste">novo</ion-button>
 <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListarPoste"></ion-icon>
@@ -20,10 +21,15 @@
       <ion-label slot="start">{{ poste.unidade}}</ion-label>
       <ion-label slot="start">{{ poste.descricao}}</ion-label>
       <ion-label slot="start">{{ poste.tipoPoste}}</ion-label>
-      <ion-icon name="create" (click)="editar(poste.id)" style="width: 30%; margin-left: 40%;"></ion-icon>
+      <ion-icon name="create" (click)="editar(poste.id)" ></ion-icon>
       <ion-icon name="trash" (click)="excluir(poste.id)" color="danger"></ion-icon>
     </ion-item>
   </ion-list>
+
+  <ion-alert
+[isOpen] = "isShowDeleteDialog"
+  header="Deseja Excluir?"
+  [buttons]="alertButtons"></ion-alert>
 </div>
 
 </ion-content>

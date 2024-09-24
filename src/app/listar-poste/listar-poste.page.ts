@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RequisicaoService } from '../service/requisicao.service';
 import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-listar-poste',
@@ -12,6 +13,7 @@ export class ListarPostePage implements OnInit {
   constructor(
     public requisicao_service:RequisicaoService,
     public router:Router,
+    private loadingCtrl: LoadingController
   ) { }
 
   public postes:Array<any> = [];
@@ -36,8 +38,6 @@ export class ListarPostePage implements OnInit {
     this.router.navigateByUrl('/cadastro-poste/' + id);
   }
   
-
-  //deu errado refazer
   excluir(id:number){
     this.isShowDeleteDialog = true;
   this.alertButtons = [{
