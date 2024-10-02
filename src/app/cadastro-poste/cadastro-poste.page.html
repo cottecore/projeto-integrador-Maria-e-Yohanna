@@ -33,10 +33,8 @@
   
 
  
-      <ion-select [(ngModel)]="tipoPoste" aria-label="Fruit" class="cadNome" style="margin-top: 5%;" interface="popover" color="favorite" label="Tipo do poste:" label-placement="floating" fill="outline" placeholder="Selecione um tipo de poste">
-        <ion-select-option value="apples">Poste de metal</ion-select-option>
-        <ion-select-option value="oranges">Poste de madeira</ion-select-option>
-        <ion-select-option value="bananas">Poste de concreto</ion-select-option>
+      <ion-select [(ngModel)]="tipo_poste_id" aria-label="Fruit" class="cadNome" style="margin-top: 5%;" interface="popover" color="favorite" label="Tipo do poste:" label-placement="floating" fill="outline" placeholder="Selecione um tipo de poste">
+        <ion-select-option [value]="t.id" *ngFor="let t of tipoPoste">{{ t.descricao }}</ion-select-option>
       </ion-select>
 
       <br>

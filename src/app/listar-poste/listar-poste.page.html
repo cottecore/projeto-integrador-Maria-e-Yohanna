@@ -18,9 +18,9 @@
 <div class="teste">
   <ion-list>
     <ion-item *ngFor="let poste of postes">
-      <ion-label slot="start">{{ poste.unidade}}</ion-label>
+      <ion-label slot="start">{{ poste.unidadeconsumidora}}</ion-label>
       <ion-label slot="start">{{ poste.descricao}}</ion-label>
-      <ion-label slot="start">{{ poste.tipoPoste}}</ion-label>
+      <ion-label slot="start">{{ poste.tipo}}</ion-label>
       <ion-icon name="create" (click)="editar(poste.id)" ></ion-icon>
       <ion-icon name="trash" (click)="excluir(poste.id)" color="danger"></ion-icon>
     </ion-item>

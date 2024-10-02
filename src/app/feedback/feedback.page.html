@@ -13,7 +13,27 @@
 
   <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaFeed"></ion-icon>
   
-  <p class="Feed-txt">Deixe o seu feedback sobre <br>o app</p>
-  <ion-img id="img-Feed" src="../../assets/Feed-Img3.png"></ion-img>
+  <p class="Feed-txt" (click)="go ('/cadastro-comentario')">Deixe o seu feedback sobre <br>o app</p>
+  <ion-img   (click)="go ('/cadastro-comentario')" id="img-Feed" src="../../assets/Feed-Img3.png"></ion-img>
+
   
+      <ion-card>
+          
+          <ion-item *ngFor="let  comentario of comentarios" class="card-comentario">
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label >{{ comentario.descricao}}</ion-label>
+            
+            <ion-icon slot="end" name="trash" (click)="excluir(comentario.id)" color="danger"></ion-icon>
+          </ion-item>
+        
+    </ion-card>
+ 
+  
+  <ion-alert
+  [isOpen] = "isShowDeleteDialog"
+    header="Deseja Excluir?"
+    [buttons]="alertButtons"></ion-alert>
+
 </ion-content>

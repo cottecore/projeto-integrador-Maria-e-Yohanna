@@ -10,7 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CadastroPostePage implements OnInit {
   public descricao:string = '';
   public unidade:string = '';
-  public tipoPoste:string = '';
+  public tipoPoste:Array<any> = [];
+  public tipo_poste_id = 0;
   public id:number = 0;
   constructor(
     public rs:RequisicaoService,
@@ -30,8 +31,8 @@ export class CadastroPostePage implements OnInit {
           .subscribe(
             (_dados:any) => {
               this.descricao = _dados.descricao;
-              this.unidade = _dados.unidade;
-              this.tipoPoste = _dados.tipoPoste;
+              this.unidade = _dados.unidadeconsumidora;
+              this.tipo_poste_id = _dados.tipo;
             }
           );
         }
@@ -40,31 +41,39 @@ export class CadastroPostePage implements OnInit {
     );
     }
      
-
   ngOnInit() {
+    this.carregarTipoPoste();
   }
 
+  salvar(){
+    const fd = new FormData();
+    fd.append('controller', 'poste');
+    fd.append('id',String(this.id));
+    fd.append('op', 'salvar');
+    fd.append('descricao',this.descricao);
+    fd.append('unidade',this.unidade);
+    fd.append('tipoPoste',String(this.tipo_poste_id));
 
-salvar(){
-  const fd = new FormData();
-  fd.append('controller', 'poste');
-  fd.append('id',String(this.id));
-  fd.append('op', 'salvar');
-  fd.append('descricao',this.descricao);
-  fd.append('unidade',this.unidade);
-  fd.append('tipoPoste',this.tipoPoste);
+    this.rs.post(fd)
+    .subscribe(
+      () => {
+        location.href = '/listar-poste';
+      }
+    );
+  }
 
+  go(rota:string){
+    window.location.href = rota;
+  } 
 
-  this.rs.post(fd)
-  .subscribe(
-    () => {
-      location.href = '/listar-poste';
-    }
-  );
-}
-
-go(rota:string){
-  window.location.href = rota;
-} 
-
+  carregarTipoPoste()
+  {
+    this.rs.get({
+      controller:'tipoposte-listar'
+    })
+    .subscribe((res:any) => {
+      console.log(res);
+      this.tipoPoste = res;
+    });
+  }
 }

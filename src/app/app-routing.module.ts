@@ -119,6 +119,10 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'cadastro-comentario',
+    loadChildren: () => import('./cadastro-comentario/cadastro-comentario.module').then( m => m.CadastroComentarioPageModule)
+  },
 ];
 
 @NgModule({
