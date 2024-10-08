@@ -53,6 +53,7 @@ export class CadastroPostePage implements OnInit {
     fd.append('descricao',this.descricao);
     fd.append('unidade',this.unidade);
     fd.append('tipoPoste',String(this.tipo_poste_id));
+   
 
     this.rs.post(fd)
     .subscribe(

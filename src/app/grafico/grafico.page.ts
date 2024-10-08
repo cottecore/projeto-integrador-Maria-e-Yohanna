@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequisicaoService } from '../service/requisicao.service';
 
 @Component({
   selector: 'app-grafico',
@@ -10,17 +11,33 @@ export class GraficoPage implements OnInit {
 public data2: any;
   public data: any;
   public options: any;
-  constructor() { }
+  public labels_tipo_poste:Array<string> = [];
+  public data_tipo_poste:Array<string> = [];
+  constructor(
+    public rs:RequisicaoService
+  ) { }
 
   ngOnInit() {
-    this.data2 = {
-      labels: ['Poste de metal', 'Poste de madeira', 'Poste de concreto'],
-      datasets: [
-        {
-          data: [540, 325, 702]
+    this.rs.get({
+        controller:'grafico-tipo-poste'
+    })
+    .subscribe(
+        (_res:any) => {
+            _res.forEach((e:any) => {
+                this.labels_tipo_poste.push('Poste de ' + e.descricao);
+                this.data_tipo_poste.push(e.quantidade);
+
+                this.data2 = {
+                    labels: this.labels_tipo_poste,
+                    datasets: [
+                      {
+                        data: this.data_tipo_poste
+                      }
+                    ]
+                  };                
+            });
         }
-      ]
-    };
+    );
 
     //outro//
     const documentStyle = getComputedStyle(document.documentElement);
