@@ -13,8 +13,9 @@
 
 <ion-content [fullscreen]="true" id="main-content-lista-poste">
   
-  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaLista-Poste" ></ion-icon>
-  <ion-button shape="round" class="BAddPoste" color="favorite" routerLink="/cadastro-poste"> <ion-icon name="add"></ion-icon> </ion-button>
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaLista-Poste"></ion-icon>
+  <ion-icon name="return-up-back-outline" class="bttVoltarListar-lamp" color="favorite" (click)="go ('/listacadconj')"></ion-icon>
+  <ion-button shape="round" class="BAddPoste" color="favorite"  (click)="go ('/cadastro-poste')"> <ion-icon name="add"></ion-icon> </ion-button>
 
 
  

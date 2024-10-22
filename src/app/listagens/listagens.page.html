@@ -13,13 +13,15 @@
   
 <ion-content [fullscreen]="true" id="main-content-listagens">
   <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListagens"></ion-icon>
-  <p class="Txt-listar-lamp" routerLink="/listar-lampada">Lista de lâmpadas</p>
+
+  <h3 style="text-align: center; color: #d87921;">Lista dos cadastros já feitos:</h3>
+  <p class="Txt-listar-lamp" (click)="go ('/listar-lampada')" >Lista de lâmpadas</p>
   
 
-  <p class="Txt-listar-poste" routerLink="/listar-poste">Lista de<br> postes</p>
+  <p class="Txt-listar-poste" (click)="go ('/listar-poste')" >Lista de<br> postes</p>
 
-  <img class="ListagemLamp" routerLink="/listar-lampada" src="../../assets/listagem-lamp.png">
+  <img class="ListagemLamp" (click)="go ('/listar-lampada')"  src="../../assets/listagem-lamp.png">
 
-  <img class="ListagemPoste" routerLink="/listar-poste" src="../../assets/Listagem-poste.png">
+  <img class="ListagemPoste" (click)="go ('/listar-poste')"  src="../../assets/Listagem-poste.png">
 
 </ion-content>

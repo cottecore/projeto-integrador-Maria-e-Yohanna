@@ -1,18 +1,69 @@
+<app-menu content-id="main-content-termos"></app-menu>
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>termos</ion-title>
-  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button color="favorite"></ion-menu-button>
+  </ion-buttons>
+  <ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
+</ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  
+<ion-content [fullscreen]="true" id="main-content-termos">
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casa-termos"></ion-icon>
+
   <ion-card>
     <ion-card-header>
       <ion-card-title>Termos de uso</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+       <h2>1. Aceitação dos Termos</h2>
+
+      <br>Ao acessar e utilizar o aplicativo de demandas e análises de dados de energia (doravante denominado "Aplicativo"), você concorda em cumprir e estar vinculado a estes Termos de Uso. Se você não concordar com estes termos, não utilize o Aplicativo.<br>
+
+      <br> <h2>2. Definições</h2>
+
+     <br>Usuário: Qualquer pessoa que se registra e utiliza o Aplicativo.
+Dados de Energia: Informações relacionadas ao consumo, demanda e análise de dados de energia elétrica fornecidas pela CELESC.<br>
+
+<br><h2>3. Objetivo do Aplicativo</h2>
+
+      <br>O Aplicativo tem como objetivo fornecer aos usuários acesso a dados sobre consumo de energia, possibilitando análises e relatórios que auxiliem na gestão do uso de energia, auxiliando os funcionários.<br>
+
+      <br><h2>4. Registro e Responsabilidades do Usuário</h2>
+
+      <br>Para utilizar o Aplicativo, o Usuário deve se registrar, fornecendo informações verídicas e atualizadas. O Usuário é responsável por manter a confidencialidade de suas credenciais de acesso e por todas as atividades realizadas em sua conta.<br>
+
+      <br> <h2>5. Propriedade Intelectual</h2>
+
+      <br>Todo o conteúdo do Aplicativo, incluindo textos, gráficos, logotipos, ícones e software, é de propriedade da CELESC ou de seus licenciantes e está protegido por leis de propriedade intelectual.<br>
+
+      <br> <h2>6. Uso do Aplicativo</h2>
+
+      <br>O Usuário concorda em utilizar o Aplicativo apenas para fins lícitos e em conformidade com as leis aplicáveis. É proibido:
+
+      <br>Realizar atividades fraudulentas ou maliciosas.
+      <br>Compartilhar dados sensíveis de terceiros sem autorização.
+      <br>Modificar, descompilar ou tentar obter o código fonte do Aplicativo.<br>
+
+      <br> <h2>7. Privacidade dos Dados</h2>
+
+      <br>As informações coletadas pelo Aplicativo serão tratadas de acordo com a Política de Privacidade da CELESC, disponível no Aplicativo. O Usuário concorda com a coleta e o tratamento de dados pessoais conforme descrito nessa política.<br>
+
+      <br><h2>8. Isenção de Responsabilidade</h2>
+
+      <br>A CELESC não se responsabiliza por qualquer dano decorrente do uso do Aplicativo, incluindo, mas não se limitando a, interrupções de serviço, perda de dados ou problemas técnicos.<br>
+
+      <br><h2>9. Alterações aos Termos de Uso</h2>
+
+      <br>A CELESC se reserva o direito de modificar estes Termos de Uso a qualquer momento. O Usuário será notificado sobre alterações significativas e o uso continuado do Aplicativo após tais modificações constituirá aceitação dos novos termos.<br>
+
+      <br><h2>10. Legislação Aplicável</h2>
+
+      <br>Estes Termos de Uso são regidos pelas leis da [indicar jurisdição]. Qualquer disputa decorrente do uso do Aplicativo será resolvida nos tribunais competentes dessa jurisdição.<br>
+
+      <br><h2>11. Contato</h2>
+      <br>Para perguntas sobre estes Termos de Uso, entre em contato conosco pelo e-mail: +55 48 99912-2920
     </ion-card-content>
   </ion-card>
 

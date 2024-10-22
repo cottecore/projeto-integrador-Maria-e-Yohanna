@@ -127,6 +127,10 @@ const routes: Routes = [
     path: 'termos',
     loadChildren: () => import('./termos/termos.module').then( m => m.TermosPageModule)
   },
+  {
+    path: 'listacadconj',
+    loadChildren: () => import('./listacadconj/listacadconj.module').then( m => m.ListacadconjPageModule)
+  },
 ];
 
 @NgModule({

@@ -13,8 +13,8 @@ export class DashboardPage implements OnInit {
   data: any;
   options: any;
 
-  data2: any;
-  options2: any;  
+  //data2: any;
+  //options2: any;  
 
   ngOnInit() {
       const documentStyle = getComputedStyle(document.documentElement);
@@ -77,30 +77,30 @@ export class DashboardPage implements OnInit {
       };
 
 
-      const documentStyle2 = getComputedStyle(document.documentElement);
-      const textColor2 = documentStyle2.getPropertyValue('--text-color');
+      //const documentStyle2 = getComputedStyle(document.documentElement);
+      //const textColor2 = documentStyle2.getPropertyValue('--text-color');
 
-      this.data2 = {
-          labels: ['A', 'B', 'C'],
-          datasets: [
-              {
-                  data: [540, 325, 702],
-                  backgroundColor: [documentStyle2.getPropertyValue('--blue-500'), documentStyle2.getPropertyValue('--yellow-500'), documentStyle2.getPropertyValue('--green-500')],
-                  hoverBackgroundColor: [documentStyle2.getPropertyValue('--blue-400'), documentStyle2.getPropertyValue('--yellow-400'), documentStyle2.getPropertyValue('--green-400')]
-              }
-          ]
-      };
+      //this.data2 = {
+          //labels: ['A', 'B', 'C'],
+          //datasets: [
+              //{
+                  //data: [540, 325, 702],
+                  //backgroundColor: [documentStyle2.getPropertyValue('--blue-500'), documentStyle2.getPropertyValue('--yellow-500'), documentStyle2.getPropertyValue('--green-500')],
+                  //hoverBackgroundColor: [documentStyle2.getPropertyValue('--blue-400'), documentStyle2.getPropertyValue('--yellow-400'), documentStyle2.getPropertyValue('--green-400')]
+              //}
+          //]
+      //};
 
-      this.options2 = {
-          plugins: {
-              legend: {
-                  labels: {
-                      usePointStyle: true,
-                      color: textColor2
-                  }
-              }
-          }
-      };      
+      //this.options2 = {
+          //plugins: {
+              //legend: {
+                  //labels: {
+                      //usePointStyle: true,
+                     // color: textColor2
+                 // }
+             // }
+         // }
+     // };      
   }
 
 

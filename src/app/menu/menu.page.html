@@ -3,39 +3,59 @@
   <ion-header>
     <ion-toolbar color="favorite">
       <ion-title>
-        <ion-icon name="person-circle" color="black" routerLink="/perfil"></ion-icon>
+        <ion-icon name="person-circle" color="black" (click)="go('/perfil')" size="large"></ion-icon>
       </ion-title>          
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
     <ion-list lines="full">
-      <ion-item>
-        <ion-label color="favorite" (click)="go ('/conjunto-grafico')">{{ traducao_service.traducao(texto.grafico) }}</ion-label>
+      <ion-item (click)="go('/conjunto-grafico')">
+        <ion-icon name="bar-chart-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.grafico) }}</ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label color="favorite" (click)="go ('/feedback')">{{ traducao_service.traducao(texto.feedback) }}</ion-label>
+      <ion-item (click)="go('/feedback')">
+        <ion-icon name="chatbubbles-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.feedback) }}</ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label color="favorite" (click)="go ('/demanda')">{{ traducao_service.traducao(texto.demanda) }}</ion-label>
+      <ion-item (click)="go('/demanda')">
+        <ion-icon name="newspaper-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.demanda) }}</ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label color="favorite" (click)="go ('/perfil')">{{ traducao_service.traducao(texto.perfil)}}</ion-label>
+      <ion-item (click)="go('/perfil')">
+        <ion-icon name="person-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.perfil) }}</ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label color="favorite" (click)="go ('/listagens')">{{ traducao_service.traducao(texto.listagem) }}</ion-label>
+      <ion-item (click)="go('/listagens')">
+        <ion-icon name="list-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.listagem) }}</ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label color="favorite" (click)="go ('/configuracoes')">{{ traducao_service.traducao(texto.configuracoes) }}</ion-label>
+      
+      <ion-item (click)="go('/listacadconj')">
+        <ion-icon name="file-tray-full" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.listacadconj) }}</ion-label>
       </ion-item>
-    <ion-item>
-      <ion-label color="favorite" (click)="go ('/dashboard')">Dashboard</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label color="favorite" (click)="go ('/lista-email')">{{ traducao_service.traducao(texto.lista_usuarios) }}</ion-label>
-    </ion-item>
-  </ion-list>
 
-    <ion-footer class="péHome"><ion-input [readonly]="true" class="no-click" placeholder="Informação para contato - voltAnalytics@gmail.com"></ion-input></ion-footer>
+      <ion-item (click)="go('/configuracoes')">
+        <ion-icon name="settings-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.configuracoes) }}</ion-label>
+      </ion-item>
+      <ion-item (click)="go('/dashboard')">
+        <ion-icon name="grid-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">Dashboard</ion-label>
+      </ion-item>
+      <ion-item (click)="go('/lista-email')">
+        <ion-icon name="people-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.lista_usuarios) }}</ion-label>
+      </ion-item>
+      <ion-item (click)="go('/termos')">
+        <ion-icon name="document-text-sharp" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">{{ traducao_service.traducao(texto.termos) }}</ion-label>
+      </ion-item>
+      
+    </ion-list>
+
+    <ion-footer class="péHome">
+      <ion-input [readonly]="true" class="no-click" placeholder="Informação para contato - voltAnalytics@gmail.com"></ion-input>
+    </ion-footer>
   </ion-content>
 </ion-menu>
-<!-- Menu Principal - Abre do lado -->

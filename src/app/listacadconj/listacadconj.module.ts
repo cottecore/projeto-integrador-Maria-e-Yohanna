@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TermosPageRoutingModule } from './termos-routing.module';
+import { ListacadconjPageRoutingModule } from './listacadconj-routing.module';
 
-import { TermosPage } from './termos.page';
+import { ListacadconjPage } from './listacadconj.page';
 import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
@@ -14,9 +14,10 @@ import { MenuPageModule } from '../menu/menu.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    TermosPageRoutingModule,
+    ListacadconjPageRoutingModule,
     MenuPageModule
+
   ],
-  declarations: [TermosPage]
+  declarations: [ListacadconjPage]
 })
-export class TermosPageModule {}
+export class ListacadconjPageModule {}

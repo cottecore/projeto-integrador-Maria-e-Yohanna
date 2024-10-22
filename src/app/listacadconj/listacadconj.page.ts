@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-termos',
-  templateUrl: './termos.page.html',
-  styleUrls: ['./termos.page.scss'],
+  selector: 'app-listacadconj',
+  templateUrl: './listacadconj.page.html',
+  styleUrls: ['./listacadconj.page.scss'],
 })
-export class TermosPage implements OnInit {
+export class ListacadconjPage implements OnInit {
 
   constructor() { }
 
@@ -14,4 +14,5 @@ export class TermosPage implements OnInit {
   go(rota:string){
     window.location.href = rota;
   }  
+
 }

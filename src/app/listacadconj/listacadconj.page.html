@@ -1,0 +1,26 @@
+<app-menu content-id="main-content-listacadconj"></app-menu>
+<div class="ion-page" id="main-content-listacadconj">
+  <ion-header>
+    <ion-toolbar  class="teste">
+       <ion-buttons slot="start">
+        <ion-menu-button color="favorite"></ion-menu-button>
+      </ion-buttons>
+     
+
+      <ion-img id="img-logo" src="../../assets/VoltA.png"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content [fullscreen]="true" id="main-content-listacadconj">
+  <ion-icon name="home-outline" color="favorite" (click)="go ('/home')" class="casaListacadconj"></ion-icon>
+  <p class="Txt-lista-lamp" (click)="go ('/lista-lampada')" >Lista de lâmpadas</p>
+  
+
+  <p class="Txt-lista-poste" (click)="go ('/lista-poste')">Lista de<br> postes</p>
+
+  <img class="ListagemLamp" (click)="go ('/lista-lampada')" src="../../assets/listagem-lamp.png">
+
+  <img class="ListagemPoste"(click)="go ('/lista-poste')" src="../../assets/Listagem-poste.png">
+
+</ion-content>
+

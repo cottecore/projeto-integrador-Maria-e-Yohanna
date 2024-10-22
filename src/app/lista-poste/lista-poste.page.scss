@@ -1,17 +1,30 @@
 .casaLista-Poste{
-    width: 10%;;
+    width: 10%;
     height: 10%;
-    margin-left: 5%;    
-    width: 2rem;
-    height: 2rem;
+    margin-left: 18%;
+    position: absolute;
     
 }
 
 .BAddPoste{
-    margin-left: 60%;
-position: absolute;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 5%;
 }
 
 #open-modal{
     margin-top: 10%;
+}
+
+.bttVoltarListar-lamp{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 5%;
+
+}
+
+#open-modal{
+    margin-top: 30%;
 }
