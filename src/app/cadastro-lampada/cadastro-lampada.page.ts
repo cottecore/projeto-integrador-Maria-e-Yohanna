@@ -42,10 +42,14 @@ export class CadastroLampadaPage implements OnInit {
 
 salvar(){
   const fd = new FormData();
-  fd.append('controller', 'lampada');
+  //fd.append('controller', 'lampada');
   fd.append('id',String(this.id));
   fd.append('op', 'salvar');
   fd.append('descricao',this.descricao);
+  fd.append('_service', 'lampada');
+  fd.append('_token', 'e03c3599f75d548acc0232f2f3dcaa11');
+  
+  
 
 
   this.rs.post(fd)
@@ -53,6 +57,16 @@ salvar(){
     () => {
       location.href = '/listar-lampada';
     }
+    /*
+    {
+      next:() => {
+        //location.href = '/listar-lampada';
+      },
+      error:() => {
+        //location.href = '/listar-lampada';
+      }
+    }    
+    */
   );
 }
 

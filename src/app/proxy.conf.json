@@ -1,7 +1,7 @@
 {
     "/requisicao/*":{
-        "target": "http://localhost/miles/index.php",
-        "secure": false,
+        "target": "https://miles.app.br/voltaanalytics/index.php",
+        "secure": true,
         "changeOrigin": true,
         "logLevel": "debug"
     }

@@ -14,7 +14,7 @@ export class TraducaoService {
 
   getIdioma(){
     let idioma_selecionado = this.local_storage.get('idioma');
-    return idioma_selecionado == '' ? this.idioma_default : idioma_selecionado;
+    return idioma_selecionado == '' || idioma_selecionado == null ? this.idioma_default : idioma_selecionado;
   }
   setIdioma(idioma:string){
     this.local_storage.set('idioma',idioma);
@@ -22,7 +22,7 @@ export class TraducaoService {
 
   traducao(texto:any){
     if (typeof texto === 'object'){
-      return texto[this.local_storage.get('idioma')];
+      return texto[this.getIdioma()];
     }else{
       return texto;
     }

@@ -15,7 +15,7 @@ export class RequisicaoService {
 
   get(dados:any) {
     dados ['idioma'] = this.traducao_service.getIdioma();
-    return this.http.get('/requisicao', {
+    return this.http.get('https://miles.app.br/voltaanalytics/index.php', {
       params:dados
     });
   }
@@ -26,7 +26,9 @@ export class RequisicaoService {
         'Access-Control-Allow-Origin' : '*'
       })
     };
-    return this.http.post('/requisicao', formData, httpOptions);
+    
+    return this.http.post('https://miles.app.br/voltaanalytics/webservice/index.php', formData, httpOptions);
+    //return this.http.post('/requisicao', formData, httpOptions);
   }  
 }
 
