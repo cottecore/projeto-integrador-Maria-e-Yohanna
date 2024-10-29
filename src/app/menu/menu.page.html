@@ -51,6 +51,10 @@
         <ion-icon name="document-text-sharp" slot="start" size="large" color="favorite"></ion-icon>
         <ion-label color="favorite">{{ traducao_service.traducao(texto.termos) }}</ion-label>
       </ion-item>
+      <ion-item (click)="go('/apresentacao')">
+        <ion-icon name="information" slot="start" size="large" color="favorite"></ion-icon>
+        <ion-label color="favorite">Sobre o App</ion-label>
+      </ion-item>
       
     </ion-list>
 
